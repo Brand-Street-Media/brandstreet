@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Brand Street | Influencer Marketing</title>
-<meta name="description" content="Brand Street connects brands with verified creators for campaigns.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Street | Premium Influencer Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-[#0f0f14] text-white overflow-x-hidden">
 
-<nav class="navbar" data-aos="fade-down">
-  <div class="logo">Brand Street</div>
-  <div>
-    <a href="brand-login.html">Brands</a>
-    <a href="creator-login.html">Creators</a>
-  </div>
+<nav class="flex justify-between items-center px-[10%] py-6 sticky top-0 z-50 bg-[#0f0f14]/80 backdrop-blur-md border-b border-white/10">
+    <div class="text-2xl font-bold tracking-tighter bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">BRAND STREET</div>
+    <div class="space-x-8">
+        <a href="brand-login.html" class="hover:text-pink-500 transition-colors">For Brands</a>
+        <a href="creator-login.html" class="bg-pink-600 px-6 py-2 rounded-full hover:bg-pink-700 transition-all shadow-lg shadow-pink-500/20">Join as Creator</a>
+    </div>
 </nav>
 
-<section class="hero" data-aos="fade-up">
-  <h1>Where Brands Meet Creators</h1>
-  <p>1500+ verified creators. Real campaigns. Real ROI.</p>
-  <a href="brand-login.html" class="btn primary">Start a Campaign</a>
-  <a href="creator-login.html" class="btn secondary">Join as Creator</a>
+<section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-pink-500/20 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] animate-pulse"></div>
+
+    <h1 class="text-6xl md:text-8xl font-black mb-6 animate__animated animate__fadeInUp">
+        Scale Your Brand <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500">With Authority</span>
+    </h1>
+    <p class="text-gray-400 text-xl max-w-2xl mb-10 animate__animated animate__fadeInUp animate__delay-1s">
+        Connect with 1,500+ top-tier creators. We don't just find influencers; we build conversion engines.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <a href="brand-login.html" class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 transition-transform">Start a Campaign</a>
+        <a href="creator-login.html" class="px-8 py-4 border border-white/20 rounded-xl hover:bg-white/5 transition-all">View Creators</a>
+    </div>
 </section>
 
-<section class="section" data-aos="fade-up">
-  <h2>Featured Campaign</h2>
-  <video controls width="70%">
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-  </video>
+<section class="py-24 px-[10%] bg-[#15151f]">
+    <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Elite Creators</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-[#1f1f2e] p-4 rounded-3xl border border-white/5 hover:border-pink-500/50 transition-all duration-500" data-aos="zoom-in">
+            <div class="overflow-hidden rounded-2xl mb-4">
+                <img src="https://i.pravatar.cc/300?img=1" class="w-full group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <h3 class="text-xl font-bold">Riya Sharma</h3>
+            <p class="text-pink-500">Fashion & Lifestyle • 120K</p>
+        </div>
+        <div class="group bg-[#1f1f2e] p-4 rounded-3xl border border-white/5 hover:border-blue-500/50 transition-all duration-500" data-aos="zoom-in" data-aos-delay="100">
+            <div class="overflow-hidden rounded-2xl mb-4">
+                <img src="https://i.pravatar.cc/300?img=2" class="w-full group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <h3 class="text-xl font-bold">Arjun Vlogs</h3>
+            <p class="text-blue-500">Travel & Tech • 300K</p>
+        </div>
+        <div class="group bg-[#1f1f2e] p-4 rounded-3xl border border-white/5 hover:border-purple-500/50 transition-all duration-500" data-aos="zoom-in" data-aos-delay="200">
+            <div class="overflow-hidden rounded-2xl mb-4">
+                <img src="https://i.pravatar.cc/300?img=3" class="w-full group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <h3 class="text-xl font-bold">Tech Tanya</h3>
+            <p class="text-purple-500">Product Reviews • 90K</p>
+        </div>
+    </div>
 </section>
-
-<section class="section dark">
-  <h2 data-aos="fade-up">Top Creators</h2>
-  <div class="cards">
-    <div class="card" data-aos="fade-right">
-      <img src="https://i.pravatar.cc/150?img=1" alt="Creator">
-      <h3>Riya Sharma</h3>
-      <p>Fashion | 120K</p>
-    </div>
-    <div class="card" data-aos="fade-up">
-      <img src="https://i.pravatar.cc/150?img=2" alt="Creator">
-      <h3>Arjun Vlogs</h3>
-      <p>Travel | 300K</p>
-    </div>
-    <div class="card" data-aos="fade-left">
-      <img src="https://i.pravatar.cc/150?img=3" alt="Creator">
-      <h3>Tech Tanya</h3>
-      <p>Tech | 90K</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Brand Street
-</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({duration:1000, once:true});
-</script>
+<script>AOS.init({duration:1000, once:true});</script>
 </body>
 </html>
