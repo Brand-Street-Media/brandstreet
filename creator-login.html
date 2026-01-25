@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Creator Login | Brand Street</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Creator Access | Brand Street</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="section">
-<h2>Creator Login/Register</h2>
-<input id="email" type="email" placeholder="Email"><br><br>
-<input id="password" type="password" placeholder="Password"><br><br>
-<button class="btn primary" onclick="registerCreator()">Register</button>
-<button class="btn secondary" onclick="loginCreator()">Login</button>
-<script src="auth.js" type="module"></script>
+<body class="bg-[#0f0f14] min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-md bg-[#1f1f2e] p-10 rounded-[2rem] shadow-2xl border border-white/5">
+        <h2 class="text-3xl font-bold mb-2">Creator Login</h2>
+        <p class="text-gray-400 mb-8">Access your dashboard and manage deals.</p>
+        
+        <div class="space-y-4">
+            <input id="email" type="email" placeholder="Email Address" class="w-full bg-[#0f0f14] border border-white/10 p-4 rounded-xl focus:border-pink-500 outline-none transition-all">
+            <input id="password" type="password" placeholder="Password" class="w-full bg-[#0f0f14] border border-white/10 p-4 rounded-xl focus:border-pink-500 outline-none transition-all">
+            
+            <button onclick="loginCreator()" class="w-full py-4 bg-pink-600 rounded-xl font-bold hover:bg-pink-700 transition-all shadow-lg shadow-pink-500/20 mt-4">Login to Dashboard</button>
+            <button onclick="registerCreator()" class="w-full py-4 border border-white/10 rounded-xl font-medium hover:bg-white/5 transition-all">Create New Account</button>
+        </div>
+    </div>
+    <script src="auth.js" type="module"></script>
 </body>
 </html>
