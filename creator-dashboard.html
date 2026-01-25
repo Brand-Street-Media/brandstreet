@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creator Dashboard | Brand Street</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+</head>
+<body class="section">
+<h2>Creator Dashboard</h2>
+
+<input id="name" placeholder="Full Name"><br>
+<input id="niche" placeholder="Niche"><br>
+<input type="file" id="mediaFile"><br>
+<button class="btn primary" onclick="uploadMedia()">Upload</button>
+
+<select id="filterNiche" onchange="filterGallery()">
+  <option value="">All Niches</option>
+  <option value="Fashion">Fashion</option>
+  <option value="Travel">Travel</option>
+  <option value="Tech">Tech</option>
+</select>
+
+<div id="creatorMediaGallery" class="cards"></div>
+
+<script src="auth.js" type="module"></script>
+</body>
+</html>
