@@ -26,7 +26,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-       .ticker-container {
+          .ticker-container {
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
@@ -37,14 +37,12 @@
     .ticker-content {
         display: inline-block;
         padding-left: 100%;
-        animation: ticker-full 60s linear infinite; /* slowed down from 25s to 60s */
+        animation: ticker-full 60s linear infinite; /* slow scroll */
         font-weight: 800;
         letter-spacing: 0.4em;
         text-transform: uppercase;
         font-size: 14px;
-        background: linear-gradient(to right, #ffffff, #ec4899, #8b5cf6, #4f46e5); /* white + original colors */
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #000000; /* black text */
     }
 
     @keyframes ticker-full {
@@ -58,10 +56,10 @@
 <div id="blob-cursor"></div>
 
 
-<nav class="fixed w-full top-0 z-50 bg-[#0f0f14]/60 backdrop-blur-xl border-b border-white/10 py-4">
+<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 py-4">
     <div class="ticker-container">
         <div class="ticker-content">
-            🎥 YOUR BRAND &middot; 📈 OUR STREET &middot; 💡 YOUR STORY &middot; ✨ YOUR BRAND &middot; 📢 OUR STREET &middot; 🎥 YOUR STORY &middot; 💡 YOUR BRAND &middot; 📈 OUR STREET &middot; ✨ YOUR STORY
+            YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY
         </div>
     </div>
 </nav>
@@ -185,5 +183,6 @@
 </script>
 </body>
 </html>
+
 
 
