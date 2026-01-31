@@ -37,20 +37,26 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* --- Moving Text Animation --- */
-        .ticker-wrapper {
+        /* --- Full Width Moving Tagline --- */
+        .ticker-container {
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
-            width: 250px; /* Adjust based on preference */
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            display: flex;
+            align-items: center;
         }
         .ticker-content {
             display: inline-block;
-            animation: ticker 15s linear infinite;
+            padding-left: 100%;
+            animation: ticker-full 25s linear infinite;
+            font-weight: 800;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            font-size: 14px;
         }
-        @keyframes ticker {
+        @keyframes ticker-full {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-100%); }
         }
     </style>
 </head>
@@ -62,22 +68,11 @@
 
 <div id="blob-cursor"></div>
 
-<nav class="flex justify-between items-center px-[8%] py-6 sticky top-0 z-50 bg-[#0f0f14]/40 backdrop-blur-xl border-b border-white/5">
-    <div class="flex items-center gap-4">
-        <div class="text-xl font-black tracking-tighter shrink-0">BRAND STREET</div>
-        <div class="ticker-wrapper hidden lg:block border-l border-white/20 pl-4">
-            <div class="ticker-content text-[10px] uppercase tracking-[0.2em] font-bold text-pink-500/80">
-                YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; &nbsp;
-                YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; &nbsp;
-            </div>
+<nav class="fixed w-full top-0 z-50 bg-[#0f0f14]/60 backdrop-blur-xl border-b border-white/10 py-4">
+    <div class="ticker-container">
+        <div class="ticker-content text-pink-500">
+            YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY
         </div>
-    </div>
-
-    <div class="flex gap-8 items-center">
-        <a href="#services" class="text-[11px] uppercase tracking-[0.2em] font-medium hover:text-pink-500 transition-all">Services</a>
-        <a href="mailto:hello@brandstreet.com" class="bg-white text-black px-6 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all">
-            Collaborate
-        </a>
     </div>
 </nav>
 
@@ -92,8 +87,8 @@
             The Premium Media Ecosystem
         </p>
 
-        <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
-            <a href="#services" class="bg-white text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+        <div class="mt-12">
+            <a href="#services" class="bg-white text-black px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all shadow-[0_0_30px_rgba(236,72,153,0.3)]">
                 Collaborate with us
             </a>
         </div>
