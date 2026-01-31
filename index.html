@@ -26,40 +26,45 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .ticker-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-        }
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker-full 25s linear infinite;
-            font-weight: 800;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-        @keyframes ticker-full {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
+       .ticker-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    .ticker-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: ticker-full 60s linear infinite; /* slowed down from 25s to 60s */
+        font-weight: 800;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        font-size: 14px;
+        background: linear-gradient(to right, #ffffff, #ec4899, #8b5cf6, #4f46e5); /* white + original colors */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes ticker-full {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
 
 <div id="blob-cursor"></div>
 
+
 <nav class="fixed w-full top-0 z-50 bg-[#0f0f14]/60 backdrop-blur-xl border-b border-white/10 py-4">
     <div class="ticker-container">
-        <div class="ticker-content text-pink-500">
-            YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY
+        <div class="ticker-content">
+            🎥 YOUR BRAND &middot; 📈 OUR STREET &middot; 💡 YOUR STORY &middot; ✨ YOUR BRAND &middot; 📢 OUR STREET &middot; 🎥 YOUR STORY &middot; 💡 YOUR BRAND &middot; 📈 OUR STREET &middot; ✨ YOUR STORY
         </div>
     </div>
 </nav>
-
 <!-- First Section with Video -->
 <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
@@ -180,4 +185,5 @@
 </script>
 </body>
 </html>
+
 
