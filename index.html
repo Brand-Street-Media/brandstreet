@@ -68,8 +68,21 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:1000, once:true});</script>
+    <!-- Custom Cursor -->
+<div id="cursor"></div>
+
+<script>
+  const cursor = document.getElementById("cursor");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
