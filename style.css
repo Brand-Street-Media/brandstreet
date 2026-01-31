@@ -35,9 +35,25 @@ body {
   object-fit: cover;
   z-index: -2;
 }
+/* Hide default cursor */
 body {
-  cursor: url("https://cur.cursors-4u.net/cursors/cur-2/cur116.cur"), auto;
+  cursor: none;
 }
+
+/* Custom yellow cursor */
+#cursor {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #facc15;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.08s ease-out;
+}
+
+
 
 
 
