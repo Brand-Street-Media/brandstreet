@@ -35,23 +35,27 @@ body {
   object-fit: cover;
   z-index: -2;
 }
+
 /* Hide default cursor */
 body {
   cursor: none;
 }
 
-/* Custom yellow cursor */
-#cursor {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #facc15;
-  border-radius: 50%;
+/* Blob cursor */
+#blob-cursor {
   position: fixed;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle at 30% 30%, #fde047, #facc15);
+  border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  filter: blur(2px);
   z-index: 9999;
-  transition: transform 0.08s ease-out;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s ease, height 0.15s ease, transform 0.05s ease;
 }
+
+
 
 
 
