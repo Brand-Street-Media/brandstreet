@@ -68,20 +68,45 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({duration:1000, once:true});</script>
-    <!-- Custom Cursor -->
-<div id="cursor"></div>
+
+    <!-- Blob Cursor -->
+<div id="blob-cursor"></div>
 
 <script>
-  const cursor = document.getElementById("cursor");
+  const blob = document.getElementById("blob-cursor");
+  let mouseX = 0, mouseY = 0;
+  let blobX = 0, blobY = 0;
 
   document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    blobX += (mouseX - blobX) * 0.15;
+    blobY += (mouseY - blobY) * 0.15;
+
+    blob.style.left = blobX + "px";
+    blob.style.top = blobY + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  document.addEventListener("mousedown", () => {
+    blob.style.transform = "translate(-50%, -50%) scale(1.4)";
+  });
+
+  document.addEventListener("mouseup", () => {
+    blob.style.transform = "translate(-50%, -50%) scale(1)";
   });
 </script>
 
+
 </body>
 </html>
+
 
 
 
