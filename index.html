@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Street | About Us</title>
+    <title>Brand Street | Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
@@ -26,52 +26,24 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .ticker-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-        }
-
-        .ticker-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker-full 60s linear infinite;
-            font-weight: 900;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            font-size: 14px;
-            color: #000000;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        @keyframes ticker-full {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
 
 <div id="blob-cursor"></div>
 
-<nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 py-4">
-    <div class="ticker-container">
-        <div class="ticker-content">
-            YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY &middot; YOUR BRAND &middot; OUR STREET &middot; YOUR STORY
-        </div>
-    </div>
-</nav>
-
 <section class="relative h-screen flex flex-col items-start justify-center text-left px-[8%] overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 -z-10">
+        <source src="assets/videos/bg.mp4" type="video/mp4">
+    </video>
+
     <div class="z-10 animate__animated animate__fadeIn">
         <h1 class="text-7xl md:text-9xl font-[900] mb-4 tracking-tighter leading-[0.9] uppercase"> 
-            ABOUT <br> BRAND <br> STREET
+            CONTACT <br> BRAND <br> STREET
         </h1>
         
         <p class="text-gray-400 text-lg md:text-xl max-w-2xl mt-8 font-light tracking-[0.3em] uppercase opacity-80">
-            Learn more about our vision, values, and what drives us.
+            Reach out to us for collaborations, inquiries, or media projects.
         </p>
 
         <div class="mt-12">
@@ -84,27 +56,21 @@
 
 <section class="py-24 px-[8%] relative z-10">
     <div class="text-center mb-20" data-aos="fade-up">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4">Our Mission</h2>
+        <h2 class="text-5xl md:text-6xl font-bold mb-4">Get in Touch</h2>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto font-light">
-            Brand Street Media is committed to delivering premium media solutions that amplify your brand’s voice and create unforgettable experiences.
+            Fill out the form below or reach us directly through email or phone.
         </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass-card p-10 rounded-3xl hover:border-pink-500/30 transition-all" data-aos="fade-up">
-            <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-            <p class="text-gray-400">To redefine how brands engage with their audience through innovative media solutions.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-3xl hover:border-purple-500/30 transition-all" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-2xl font-bold mb-4">Our Values</h3>
-            <p class="text-gray-400">Creativity, integrity, and measurable impact guide everything we do.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-3xl hover:border-indigo-500/30 transition-all" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-2xl font-bold mb-4">Our Team</h3>
-            <p class="text-gray-400">A group of passionate professionals dedicated to bringing your brand story to life.</p>
-        </div>
+    <div class="max-w-3xl mx-auto">
+        <form class="grid gap-6">
+            <input type="text" placeholder="Your Name" class="glass-card p-4 rounded-xl w-full text-white placeholder-gray-400">
+            <input type="email" placeholder="Your Email" class="glass-card p-4 rounded-xl w-full text-white placeholder-gray-400">
+            <textarea placeholder="Your Message" class="glass-card p-4 rounded-xl w-full text-white placeholder-gray-400 h-40"></textarea>
+            <button type="submit" class="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-pink-500 hover:text-white transition-all shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+                Send Message
+            </button>
+        </form>
     </div>
 </section>
 
